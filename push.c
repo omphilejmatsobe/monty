@@ -1,5 +1,5 @@
 #include "monty.h"
-
+#include <ctype.h>
 /**
  * is_digit - checks if string is only digits
  * @arg: input string
@@ -21,8 +21,8 @@ static int is_digit(char *arg)
 }
 
 /**
- * m_push - push an integer onto the stack
- * @stack: double pointer to the beginning of the stack
+ * m_push - pushs an integer onto the stack
+ * @stack: pointer to pointer of the stack
  * @line_number: script line number
  *
  * Return: void

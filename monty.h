@@ -2,11 +2,12 @@
 #define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <sys/types.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <string.h>
-#include <ctype.h>
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -53,5 +54,10 @@ typedef struct instruction_s
 } instruction_t;
 
 void f_push(stack_t **head, unsigned int number);
-static int is_digit(char *arg);
+void f_pall(stack_t **head, unsigned int counter);
+void m_pop(stack_t **stack, unsigned int line_number);
+void m_swap(stack_t **stack, unsigned int line_number);
+void m_add(stack_t **stack, unsigned int line_number);
+void m_nop(stack_t **stack, unsigned int line_number);
+void m_pint(stack_t **stack, unsigned int line_number);
 #endif
